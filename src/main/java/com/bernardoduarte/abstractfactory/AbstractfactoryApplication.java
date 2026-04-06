@@ -1,13 +1,13 @@
-package com.bernardoduarte.factorymethod;
+package com.bernardoduarte.abstractfactory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FactorymethodApplication {
+public class AbstractfactoryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FactorymethodApplication.class, args);
+		SpringApplication.run(AbstractfactoryApplication.class, args);
 	}
 
 }

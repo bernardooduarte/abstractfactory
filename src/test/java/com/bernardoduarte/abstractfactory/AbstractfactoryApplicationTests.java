@@ -1,10 +1,10 @@
-package com.bernardoduarte.factorymethod;
+package com.bernardoduarte.abstractfactory;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FactorymethodApplicationTests {
+class AbstractfactoryApplicationTests {
 
 	@Test
 	void contextLoads() {

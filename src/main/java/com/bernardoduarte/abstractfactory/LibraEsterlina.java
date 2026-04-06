@@ -1,4 +1,4 @@
-package com.bernardoduarte.factorymethod;
+package com.bernardoduarte.abstractfactory;
 
 public class LibraEsterlina extends TaxaCambio {
 
