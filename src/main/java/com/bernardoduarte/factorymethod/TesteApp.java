@@ -3,19 +3,17 @@ package com.bernardoduarte.factorymethod;
 public class TesteApp {
 
     public static void main(String[] args) {
+        executarFactory(new DolarAmericanoFactory(), 5.17);
+        executarFactory(new EuroFactory(), 5.62);
+        executarFactory(new LibraEsterlinaFactory(), 6.55);
+    }
 
-        TaxaCambioFactory factory;
+    private static void executarFactory(TaxaCambioFactory factory, double valorEmReais) {
+        TaxaCambio taxa = factory.criarTaxa(valorEmReais);
+        FormatadorValor formatador = factory.criarFormatadorValor();
 
-        factory = new DolarAmericanoFactory();
-        TaxaCambio taxaDolar = factory.criarTaxa(5.17);
-        taxaDolar.exibirInfo();
-
-        factory = new EuroFactory();
-        TaxaCambio taxaEuro = factory.criarTaxa(5.62);
-        taxaEuro.exibirInfo();
-
-        factory = new LibraEsterlinaFactory();
-        TaxaCambio taxaLibra = factory.criarTaxa(6.55);
-        taxaLibra.exibirInfo();
+        taxa.exibirInfo();
+        System.out.println("Formatado: " + formatador.formatar(taxa.getValorEmReais()));
+        System.out.println("-------------------------------");
     }
 }

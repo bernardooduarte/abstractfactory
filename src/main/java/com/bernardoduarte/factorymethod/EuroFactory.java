@@ -5,4 +5,9 @@ public class EuroFactory extends TaxaCambioFactory {
     public TaxaCambio criarTaxa(double valorEmReais) {
         return new Euro(valorEmReais);
     }
+
+    @Override
+    public FormatadorValor criarFormatadorValor() {
+        return new FormatadorEuro();
+    }
 }

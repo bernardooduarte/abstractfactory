@@ -5,4 +5,9 @@ public class LibraEsterlinaFactory extends TaxaCambioFactory {
     public TaxaCambio criarTaxa(double valorEmReais) {
         return new LibraEsterlina(valorEmReais);
     }
+
+    @Override
+    public FormatadorValor criarFormatadorValor() {
+        return new FormatadorLibraEsterlina();
+    }
 }

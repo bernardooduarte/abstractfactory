@@ -5,4 +5,9 @@ public class DolarAmericanoFactory extends TaxaCambioFactory {
     public TaxaCambio criarTaxa(double valorEmReais) {
         return new DolarAmericano(valorEmReais);
     }
+
+    @Override
+    public FormatadorValor criarFormatadorValor() {
+        return new FormatadorDolarAmericano();
+    }
 }
